@@ -1,0 +1,16 @@
+header{
+  background-color: #000;
+  color: red;
+  font-size: 4em;
+  border: 0.1em 0.1em;
+}
+
+img{
+  margin: 0.1em;
+}
+
+footer{
+  float:right;
+  font-size:0.5em;
+}
+

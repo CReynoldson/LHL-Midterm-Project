@@ -1,0 +1,29 @@
+main{
+  border:1px solid black;
+  height:100%;
+  padding:1em 2em;
+  width: 75%;
+}
+section{
+  border:1px solid outset black;
+  display: block;
+  height:20%;
+  width: 20%;
+  margin:2em;
+}
+section.beef{
+  float:right;
+}
+section.beef:active{
+  border:1px solid red;
+}
+section.chicken{
+  float:left;
+}
+section.fish{
+  float:left;
+}
+section.veg{
+  float:right;
+}
+
