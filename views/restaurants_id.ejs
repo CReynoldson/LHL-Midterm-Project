@@ -5,15 +5,63 @@
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/sections.css" type="text/css" />
   <link rel="stylesheet" href="/styles/aside.css" type="text/css" />
+  <!--BootStrap Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Bootstrap Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <header>Buritocalyspe Now</header>
+  <header>   <img src = "superhero.jpg" width="50px" height="50px">
+  MiddleMan
+  <footer>UserName</footer></header>
     <main>
-    <section class = "beef"><button type= "toggle">Beef</button></section>
-    <section class = "chicken">Chicken</section>
-    <section class = "veg">Vegetarian</section>
-    <section class = "fish">Fish</section>
+      <h1> Burritocalyspe</h1>
+
+      <div id = "food" class = "row">
+        <div class = "col-md-8">
+          <section>
+            <button id = "start" type="button" class="btn   btn-primary btn-block active">Start Your Burrito
+            </button>
+          </section>
+        </div>
+        <div id = "cart" class = "col-md-4">
+          <div class = "col-md-offset-5">
+            <aside>Cart</aside>
+          </div>
+        </div>
+      </div>
+      <div class = "fillings">
+        <div class = "row">
+          <div class = "col-md-8">
+          <section class = "beef">
+            <button type="button" class="btn btn-primary btn-block active">
+              Beef
+            </button>
+          </section>
+
+          <section class = "chicken">
+            <button type="button" class="btn btn-primary btn-block active">
+            Chicken
+            </button>
+          </section>
+
+          <section class = "veg">
+            <button type="button" class="btn btn-primary btn-block active">
+              Vegetarian
+            </button>
+          </section>
+          <section class = "fish">
+            <button type="button" class="btn btn-primary btn-block active">
+              Fish
+            </button>
+          </section>
+          </div>
+        </div>
+      </div>
     </main>
-    <aside class = "cart">Cart</section>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+
 </body>
 </html>

@@ -8,3 +8,7 @@ $(() => {
     }
   });;
 });
+
+$("#start").click(function(){
+  $(".fillings").slideToggle("slow","linear");
+});
