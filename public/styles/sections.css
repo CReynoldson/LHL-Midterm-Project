@@ -2,26 +2,30 @@
 button.btn{
   font-size:3em;
 }
+button.btn:active{
+  background-color: green;
+}
 #beef{
   float:right;
-  width:25%;
 }
 #chicken{
   float:left;
-  width:25%;
   margin:0em;
 }
 #fish{
   float:left;
-  width:25%;
   margin:0em;
 }
 #veg{
   float:right;
-  width: 25%;
   margin:0em;
 }
 button.start{
   font-size:5em;
 }
-
+button.meatMenu{
+  width:25%;
+}
+button.width{
+  width:100%;
+}
