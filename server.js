@@ -43,6 +43,26 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get("/restaurants", (req, res) => {
+  res.render("restaurants");
+});
+
+app.get("/restaurants/id", (req, res) => {
+  res.render("restaurants_id");
+});
+
+app.get("/confirm-order", (req, res) => {
+  res.render("order_confirmation");
+});
+
+app.get("/current-orders", (req, res) => {
+  res.render("current_orders");
+})
+
+app.get("/orders-in-progress", (req, res) => {
+  res.render("restaurant_orders");
+});
+
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
 });
