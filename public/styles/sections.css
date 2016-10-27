@@ -1,21 +1,27 @@
 
-
-#start{
-  font-size:5em;
-}
 button.btn{
   font-size:3em;
 }
-section.beef{
+#beef{
   float:right;
+  width:25%;
 }
-section.chicken{
+#chicken{
   float:left;
+  width:25%;
+  margin:0em;
 }
-section.fish{
+#fish{
   float:left;
+  width:25%;
+  margin:0em;
 }
-section.veg{
+#veg{
   float:right;
+  width: 25%;
+  margin:0em;
+}
+button.start{
+  font-size:5em;
 }
 

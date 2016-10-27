@@ -9,6 +9,6 @@ $(() => {
   });;
 });
 
-$("#start").click(function(){
-  $(".fillings").slideToggle("slow","linear");
+$(".start").click(function(){
+  $(".fillings").slideToggle("fast","linear");
 });
