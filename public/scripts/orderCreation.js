@@ -1,23 +1,29 @@
 //select active buttons and make them into an object
-var totalOrder = [];
-var orderItem = {
-  Filling: "",
-  Type: "",
-  Sauce: "",
-  Extras: []
-};
 
-$("#addToOrder").on("click", function(){
-  console.log("clicked");
-  var active = $(".active").text();
-  console.log(active);
-  console.log(typeof active);
-  var result = active.split(" ");
-  var filteredResult = result.filter(function (value){
-    if (value == null || value.length === 0){
-      return false;
+var totalOrder = [];
+
+
+$("#addToOrder").on("click", function(possibleOrderFillings, extras){
+
+var possibleOrderFillings = ["#crispy", "#grilled", "#ground", "#steak", "#halibut", "#cod", "#tofu", "#rice"]
+var addOns = ["#sourCream", "#guac", "#salsa"];
+
+  var orderItem = {
+    type: "",
+    sauce: "",
+    extras: []
+  };
+
+  possibleOrderFillings.forEach(function (elm){
+    if ($(elm).is(":visible")){
+      orderItem.type = elm;
     }
-    return true;
   });
-  console.log(filteredResult);
+  addOns.forEach(function (elm){
+    if ($(elm).hasClass("active")){
+      orderItem.extras.push(elm);
+    }
+  });
+  totalOrder.push(orderItem);
+ console.log(orderItem);
 });
