@@ -71,7 +71,7 @@ $(".second").click(function(){
   $(this).toggleClass("width");
   $(".third").removeClass("active");
   $(this).siblings().toggleClass("hide");
-  $(".extras").slideDown("fast","linear");
+  $(".extras").slideToggle("fast","linear");
 });
 $(".third").click(function(){ //sour cream guac salsa
   $(this).toggleClass("active");
