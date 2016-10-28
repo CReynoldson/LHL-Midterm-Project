@@ -5,6 +5,12 @@ $(".start").click(function(){
   $(".fishP").addClass("hide");
   $(".girlledP").addClass("hide");
   $(".crispyP").addClass("hide");
+  $(".steakP").addClass("hide");
+  $(".groundP").addClass("hide");
+  $(".tofuP").addClass("hide");
+  $(".riceP").addClass("hide");
+  $(".halibutP").addClass("hide");
+  $(".codP").addClass("hide");
 });
 $("#chicken").click(function(){
   $(".chickenP").toggleClass("hide");

@@ -78,6 +78,10 @@ $(".third").click(function(){ //sour cream guac salsa
   $(this).blur();
 });
 
+$("#sauce").change(function() {
+  var heat = document.getElementById("sauce").value;
+  document.getElementById("heatLevel").innerHTML = heat + " HEATS";
+});
 
 
 
