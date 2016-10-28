@@ -1,3 +1,13 @@
 #cart{
-  border-bottom:1px solid black;
+  background: #eee;
+  text-align: center;
+}
+
+.order-items {
+  text-align: left;
+  font-size: 1em;
+}
+
+.title {
+  font-size: 2em;
 }
