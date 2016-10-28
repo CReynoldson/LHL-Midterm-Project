@@ -1,13 +1,20 @@
 #cart{
   background: #eee;
   text-align: center;
+  border: 2px solid green;
 }
 
 .order-items {
   text-align: left;
   font-size: 1em;
+  padding: 5px;
 }
 
 .title {
   font-size: 2em;
+}
+
+.checkout {
+  font-size: 1em;
+  margin-bottom: 5px;
 }

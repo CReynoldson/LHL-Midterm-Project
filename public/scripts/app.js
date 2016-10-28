@@ -17,7 +17,7 @@ $(document).ready(function(){
   $('.vegTypes').hide();
   $('.beefTypes').hide();
   $('.extras').hide();
-});
+//});
 
 $(".start").click(function(){
   $(".fillings").slideToggle("fast","linear");
@@ -81,8 +81,36 @@ $(".second").click(function(){
   $(this).siblings().toggleClass("hide");
   $(".extras").slideDown("fast","linear");
 });
-$(".third").click(function(){
+$(".third").click(function(){ //sour cream guac salsa
   $(this).toggleClass("active");
   $(this).blur();
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+//select active buttons and make them into an object
+var totalOrder = [];
+var orderItem = {
+  Filling: "",
+  Type: "",
+  Sauce: "",
+  Extras: []
+};
+console.log("hi");
+console.log($("button.active"));
+
+
+
+
+
+});
