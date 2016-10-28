@@ -1,9 +1,8 @@
 //select active buttons and make them into an object
 
-var totalOrder = [];
+module.exports var totalOrder = [];
 
-
-$("#addToOrder").on("click", function(possibleOrderFillings, extras){
+$("#addToOrder").on("click", function(){
 
 var possibleOrderFillings = ["#crispy", "#grilled", "#ground", "#steak", "#halibut", "#cod", "#tofu", "#rice"]
 var addOns = ["#sourCream", "#guac", "#salsa"];
@@ -13,6 +12,8 @@ var addOns = ["#sourCream", "#guac", "#salsa"];
     sauce: "",
     extras: []
   };
+
+  orderItem.sauce = $("#sauce").val();
 
   possibleOrderFillings.forEach(function (elm){
     if ($(elm).is(":visible")){
@@ -26,4 +27,21 @@ var addOns = ["#sourCream", "#guac", "#salsa"];
   });
   totalOrder.push(orderItem);
  console.log(orderItem);
+ console.log(totalOrder);
+
+
+  $(".fillings").slideToggle("fast","linear");
+  $('.chickenTypes').hide();
+  $('.fishTypes').hide();
+  $('.vegTypes').hide();
+  $('.beefTypes').hide();
+  $('.extras').hide();
+  $(".second").removeClass("width");
+  $(".second").removeClass("hide");
+  $(".second").removeClass("active");
+  $(".meatMenu").removeClass("width");
+  $(".meatMenu").removeClass("hide");
+  $(".meatMenu").removeClass("active");
+  $(".third").removeClass("active");
 });
+

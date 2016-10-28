@@ -73,7 +73,7 @@ $(".second").click(function(){
   $(this).siblings().toggleClass("hide");
   $(".extras").slideToggle("fast","linear");
 });
-$(".third").click(function(){ //sour cream guac salsa
+$(".third").click(function(){
   $(this).toggleClass("active");
   $(this).blur();
 });
