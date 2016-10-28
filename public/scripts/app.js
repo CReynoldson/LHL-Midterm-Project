@@ -17,7 +17,7 @@ $(document).ready(function(){
   $('.vegTypes').hide();
   $('.beefTypes').hide();
   $('.extras').hide();
-//});
+});
 
 $(".start").click(function(){
   $(".fillings").slideToggle("fast","linear");
@@ -102,19 +102,9 @@ $(".third").click(function(){ //sour cream guac salsa
 
 
 
-//select active buttons and make them into an object
-var totalOrder = [];
-var orderItem = {
-  Filling: "",
-  Type: "",
-  Sauce: "",
-  Extras: []
-};
-console.log("hi");
-console.log($("button.active"));
 
 
 
 
 
-});
+
