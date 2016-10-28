@@ -12,23 +12,13 @@
 
 .title {
   font-size: 2em;
+  text-align: center;
+  background: blue;
 }
 
 .checkout {
   font-size: 1em;
   margin-bottom: 5px;
 }
-aside{
-    list-style-type: none;
-    margin: 66%;
-    padding: 0;
-    width: 33%;
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
 
-}
-.float{
-  float:right;
-}
+
