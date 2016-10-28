@@ -11,12 +11,14 @@ $(".start").click(function(){
   $(".riceP").addClass("hide");
   $(".halibutP").addClass("hide");
   $(".codP").addClass("hide");
+  $(".heat").addClass("hide");
 });
 $("#chicken").click(function(){
   $(".chickenP").toggleClass("hide");
   $(".chickenP").siblings().addClass("hide");
   $(".girlledP").addClass("hide");
   $(".crispyP").addClass("hide");
+  $(".heat").addClass("hide");
 });
 $("#beef").click(function(){
   $(".beefP").toggleClass("hide");
