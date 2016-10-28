@@ -1,6 +1,7 @@
 
 $("#sauce").change(function() {
-  switch(document.getElementById("sauce").value){
+  var heat = Number(document.getElementById("sauce").value);
+  switch(heat){
     case 1:
       $(".1").removeClass("hide");
       $(".1").siblings().addClass("hide");
@@ -32,10 +33,6 @@ $("#sauce").change(function() {
       case 8:
       $(".8").removeClass("hide");
       $(".8").siblings().addClass("hide");
-      break;
-      default:
-      $(".4").removeClass("hide");
-      $(".4").siblings().addClass("hide");
   }
 
 });
