@@ -64,6 +64,7 @@ $(".meatMenu").click(function(){
   $(".third").removeClass("active");
   $(this).siblings().toggleClass("hide");
   $(this).toggleClass( "width" );
+  $(".heat").addClass("hide");
 });
 
 $(".second").click(function(){
@@ -72,6 +73,8 @@ $(".second").click(function(){
   $(".third").removeClass("active");
   $(this).siblings().toggleClass("hide");
   $(".extras").slideToggle("fast","linear");
+  document.getElementById("sauce").value = "4";
+  document.getElementById("heatLevel").innerHTML = "4" + " HEATS";
 });
 $(".third").click(function(){
   $(this).toggleClass("active");

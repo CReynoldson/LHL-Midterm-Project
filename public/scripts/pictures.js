@@ -41,32 +41,40 @@ $("#veg").click(function(){
 $("#grilled").click(function(){
   $(".grilledP").toggleClass("hide");
   $(".girlledP").siblings().addClass("hide");
+  $(".4").removeClass("hide");
 });
 $("#crispy").click(function(){
   $(".crispyP").toggleClass("hide");
   $(".crispyP").siblings().addClass("hide");
+  $(".4").removeClass("hide");
 });
 $("#steak").click(function(){
   $(".steakP").toggleClass("hide");
   $(".steakP").siblings().addClass("hide");
+  $(".4").removeClass("hide");
 });
 $("#ground").click(function(){
   $(".groundP").toggleClass("hide");
   $(".groundP").siblings().addClass("hide");
+  $(".4").removeClass("hide");
 });
 $("#tofu").click(function(){
   $(".tofuP").toggleClass("hide");
   $(".tofuP").siblings().addClass("hide");
+  $(".4").removeClass("hide");
 });
 $("#rice").click(function(){
   $(".riceP").toggleClass("hide");
   $(".riceP").siblings().addClass("hide");
+  $(".4").removeClass("hide");
 });
 $("#cod").click(function(){
   $(".codP").toggleClass("hide");
   $(".codP").siblings().addClass("hide");
+  $(".4").removeClass("hide");
 });
 $("#halibut").click(function(){
   $(".halibutP").toggleClass("hide");
   $(".halibutP").siblings().addClass("hide");
+  $(".4").removeClass("hide");
 });
