@@ -5,11 +5,3 @@ body {
 body h1 {
   color: #244751;
 }
-
-.row {
-  border: 1px solid red;
-}
-
-.col-md-8, .col-md-4 {
-  border: 2px dotted blue;
-}

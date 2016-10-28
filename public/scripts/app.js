@@ -42,6 +42,7 @@ $(".start").click(function(){
 $("#chicken").click(function(){
   $(this).toggleClass("active");
   $(".chickenP").removeClass("hide");
+  $(".chickenP").siblings().addClass("hide");
   $(".chickenTypes").slideToggle("fast","linear");
   $('.extras').hide();
 
@@ -49,18 +50,21 @@ $("#chicken").click(function(){
 $("#beef").click(function(){
   $(this).toggleClass("active");
   $(".beefP").removeClass("hide");
+  $(".beefP").siblings().addClass("hide");
   $(".beefTypes").slideToggle("fast","linear");
   $('.extras').hide();
 });
 $("#fish").click(function(){
   $(this).toggleClass("active");
   $(".fishP").removeClass("hide");
+  $(".fishP").siblings().addClass("hide");
   $(".fishTypes").slideToggle("fast","linear");
   $('.extras').hide();
 });
 $("#veg").click(function(){
   $(this).toggleClass("active");
   $(".vegP").removeClass("hide");
+  $(".vegP").siblings().addClass("hide");
   $(".vegTypes").slideToggle("fast","linear");
   $('.extras').hide();
 });

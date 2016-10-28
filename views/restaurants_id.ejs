@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Burritocalyspe Now</title>
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/sections.css" type="text/css" />
@@ -13,6 +14,7 @@
 
   <!-- <!Bootstrap Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -20,25 +22,154 @@
   <header>   <img src = "../pictures/superhero.jpg" width="50px" height="50px">
   MiddleMan
   <footer>UserName</footer></header>
-<main>
-  <h1 class = "dumplings"> Burritocalypse Now</h1>
-
-  <div class = "container">
-    <!-- Start of container row -->
-    <div id = "food" class = "row">
-      <div class = "col-md-8">
+    <main>
+    <div class = "container">
+      <h1 class = "dumplings"> Burritocalypse Now</h1>
+      <div id = "food" class = "row">
+      <div class = "row">
+        <div class = "col-md-8">
           <section>
             <button type="button" class="start btn-primary btn-block">Start Your Purrito
             </button>
           </section>
 
+          <section class = "fillings">
+
+            <div class = "row">
+
+              <div class = "col-md-12">
+
+                <button id = "chicken" type="button" class="btn meatMenu btn-primary btn-block">
+                Chicken
+                </button>
+                <button id = "beef" type="button" class="btn meatMenu btn-primary btn-block">
+                Beef
+                </button>
+
+                <button id = "veg" type="button" class="btn meatMenu btn-primary btn-block">
+                  Veggie
+                </button>
+
+                <button id = "fish" type="button" class="btn meatMenu btn-primary btn-block">
+                  Fish
+                </button>
+
+              </div>
+
+            </div>
+
+      </section>
+      <section class = "chickenTypes">
+        <div class = "row">
+          <div class = "col-md-12">
+
+    </div>
 
 
+            <button type="button" class="btn standard btn-primary second btn-block">
+            Grilled
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class = "beefTypes">
+        <div class = "row">
+          <div class = "col-md-12">
 
-      </div>
-      <div id = "cart" class = "col-md-4">
-        <!-- <div class = "col-md-offset-1"> -->
-          <aside>
+            <button type="button" class="btn standard btn-primary second btn-block">
+            Ground Beef
+            </button>
+
+            <button type="button" class="btn standard btn-primary second btn-block">
+            Steak
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class = "fishTypes">
+        <div class = "row">
+          <div class = "col-md-12">
+
+            <button type="button" class="btn standard btn-primary second btn-block">
+            Hailbit
+            </button>
+
+            <button type="button" class="btn standard btn-primary second btn-block">
+            Cod
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class = "vegTypes">
+        <div class = "row">
+          <div class = "col-md-12">
+
+            <button type="button" class="btn standard btn-primary second btn-block">
+            Tofu
+            </button>
+
+            <button type="button" class="btn standard btn-primary second btn-block">
+            Rice
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class = "extras">
+        <div class = "row">
+          <div class = "col-md-12">
+             <label for="sauce">Sauce:</label>
+             <input type="range" name="sauce" id="sauce" value="4" min="0" max="8">
+          </div>
+        </div>
+        <div class = "row">
+          <div class = "col-md-12">
+
+            <button type="button" class="btn third btn-primary btn-block">
+            Sour Cream
+            </button>
+
+            <button type="button" class="btn third btn-primary btn-block">
+            Guac
+            </button>
+            <button type="button" class="btn third btn-primary btn-block">
+            Salsa
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class ="pictures">
+        <div class = "row">
+          <div class = "col-md-1">
+            <img class = "picture hide beefP" src = ../pictures/cow.png>
+            <img class = "picture hide fishP" src = ../pictures/fish.png>
+            <img class = "picture hide vegP" src = ../pictures/veg.png>
+            <img class = "picture hide chickenP" src = ../pictures/chicken.png>
+          </div>
+        </div>
+        <div class = "row">
+          <div class = "col-md-1">
+            <img class = "picture hide grilled" src = ../pictures/grilled.jpg>
+            <img class = "picture hide crispy" src = ../pictures/cripsy.jpg>
+            <img class = "picture hide steak" src = ../pictures/steak.png>
+            <img class = "picture hide ground" src = ../pictures/grounf.jpg>
+            <img class = "picture hide tofu" src = ../pictures/tofu.jpg>
+            <img class = "picture hide rice" src = ../pictures/rice.png>
+            <img class = "picture hide cod" src = ../pictures/cod.png>
+            <img class = "picture hide halibit" src = ../pictures/halibut.jpg>
+          </div>
+        </div>
+        <div class = "row">
+          <div class = "col-md-1">
+          </div>
+        </div>
+        <div class = "row">
+          <div class = "col-md-1">
+          </div>
+        </div>
+      </section>
+        </div>
+        <div class = "col-md-4">
+           <aside>
             <span class = "title">Your Order</span>
               <ul>
                 <li class = "order-items">There isn't anything here yet</li>
@@ -52,89 +183,8 @@
               </ul>
             <p class = "subtotal"> Your subtotal</p>
             <button type="button" class="col-md-offset-3 col-md-6 checkout btn btn-primary btn-md">Done</button>
-          </aside>
-        <!-- </div> -->
+          </aside>        </div>
       </div>
-  <section class = "fillings">
-
-    <div class = "row">
-
-      <div class = "col-md-8">
-
-        <button id = "chicken" type="button" class="btn meatMenu btn-primary btn-block">
-        Chicken
-        </button>
-        <button id = "beef" type="button" class="btn meatMenu btn-primary btn-block">
-        Beef
-        </button>
-
-        <button id = "veg" type="button" class="btn meatMenu btn-primary btn-block">
-        Veggie
-        </button>
-
-        <button id = "fish" type="button" class="btn meatMenu btn-primary btn-block">
-        Fish
-        </button>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class = "chickenTypes">
-    <div class = "row">
-      <div class = "col-md-8">
-
-        <button type="button" class="btn standard btn-primary second btn-block">
-        Crispy
-        </button>
-
-        <button type="button" class="btn standard btn-primary second btn-block">
-        Grilled
-        </button>
-      </div>
-    </div>
-  </section>
-  <section class = "beefTypes">
-    <div class = "row">
-      <div class = "col-md-8">
-
-        <button type="button" class="btn standard btn-primary second btn-block">
-        Ground Beef
-        </button>
-
-        <button type="button" class="btn standard btn-primary second btn-block">
-        Steak
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <section class = "fishTypes">
-    <div class = "row">
-      <div class = "col-md-8">
-
-        <button type="button" class="btn standard btn-primary second btn-block">
-        Hailbit
-        </button>
-
-        <button type="button" class="btn standard btn-primary second btn-block">
-        Cod
-        </button>
-      </div>
-    </div>
-  </section>
-  <section class = "vegTypes">
-    <div class = "row">
-      <div class = "col-md-8">
-        <button type="button" class="btn standard btn-primary second btn-block">
-        Tofu
-        </button>
-
-        <button type="button" class="btn standard btn-primary second btn-block">
-        Rice
-        </button>
       </div>
     </div>
   </section>
@@ -144,45 +194,9 @@
         <label for="sauce">Sauce:</label>
         <input type="range" name="sauce" id="sauce" value="4" min="0" max="8">
       </div>
-    </div>
-  <div class = "row">
-    <div class = "col-md-8">
-      <button type="button" class="btn third btn-primary btn-block">
-      Sour Cream
-      </button>
 
-      <button type="button" class="btn third btn-primary btn-block">
-      Guac
-      </button>
-      <button type="button" class="btn third btn-primary btn-block">
-      Salsa
-      </button>
-    </div>
-  </div>
-
-  </div> <!-- this is the food row div -->
-</div> <!-- this is the container div -->
-  </section>
-<section class ="pictures">
-<div class = "row">
-<div class = "col-md-1">
-<img class = "picture hide beefP" src = ../pictures/cow.png>
-<img class = "picture hide fishP" src = ../pictures/fish.png>
-<img class = "picture hide vegP" src = ../pictures/veg.png>
-<img class = "picture hide chickenP" src = ../pictures/chicken.png>
-</div>
-
-</div>
-</section>
-
-<div class = "container">
-
-</div>
-
-
-</main>
-<script type="text/javascript" src="/scripts/app.js"></script>
-
-
-</body>
+    </main>
+    <script type="text/javascript" src="/scripts/app.js">
+    </script>
+  </body>
 </html>
