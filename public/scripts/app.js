@@ -16,26 +16,73 @@ $(document).ready(function(){
   $('.fishTypes').hide();
   $('.vegTypes').hide();
   $('.beefTypes').hide();
+  $('.extras').hide();
 });
 
 $(".start").click(function(){
   $(".fillings").slideToggle("fast","linear");
+  $('.chickenTypes').hide();
+  $('.fishTypes').hide();
+  $('.vegTypes').hide();
+  $('.beefTypes').hide();
+  $('.extras').hide();
+  $(".second").removeClass("width");
+  $(".second").removeClass("hide");
+  $(".second").removeClass("active");
+  $(".meatMenu").removeClass("width");
+  $(".meatMenu").removeClass("hide");
+  $(".meatMenu").removeClass("active");
+  $(".third").removeClass("active");
+  $(".chickenP").addClass("hide");
+  $(".beefP").addClass("hide");
+  $(".vegP").addClass("hide");
+  $(".fishP").addClass("hide");
 });
 
 $("#chicken").click(function(){
+  $(this).toggleClass("active");
+  $(".chickenP").removeClass("hide");
   $(".chickenTypes").slideToggle("fast","linear");
+  $('.extras').hide();
+
 });
 $("#beef").click(function(){
+  $(this).toggleClass("active");
+  $(".beefP").removeClass("hide");
   $(".beefTypes").slideToggle("fast","linear");
+  $('.extras').hide();
 });
 $("#fish").click(function(){
+  $(this).toggleClass("active");
+  $(".fishP").removeClass("hide");
   $(".fishTypes").slideToggle("fast","linear");
+  $('.extras').hide();
 });
 $("#veg").click(function(){
+  $(this).toggleClass("active");
+  $(".vegP").removeClass("hide");
   $(".vegTypes").slideToggle("fast","linear");
+  $('.extras').hide();
 });
 
 $(".meatMenu").click(function(){
-  $(this).siblings().toggle();
-  $(this).toggleClass( "width" )
+  $(".second").removeClass("width");
+  $(".second").removeClass("active");
+  $(".second").removeClass("hide");
+  $(".third").removeClass("active");
+  $(this).siblings().toggleClass("hide");
+  $(this).toggleClass( "width" );
 });
+
+$(".second").click(function(){
+  $(this).toggleClass("active");
+  $(this).toggleClass("width");
+  $(".third").removeClass("active");
+  $(this).siblings().toggleClass("hide");
+  $(".extras").slideDown("fast","linear");
+});
+$(".third").click(function(){
+  $(this).toggleClass("active");
+  $(this).blur();
+});
+

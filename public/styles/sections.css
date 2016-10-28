@@ -16,6 +16,21 @@ button.standard{
   float:left;
   width:50%;
 }
+button.third{
+  float:left;
+  width:33%;
+}
 button.width{
   width:100%;
+}
+#sauce{
+  background-color: blue;
+}
+.hide{
+  display:none;
+}
+.picture{
+  margin-left:1em;
+  height:10em;
+  width: 10em;
 }
