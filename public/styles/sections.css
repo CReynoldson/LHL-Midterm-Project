@@ -2,29 +2,19 @@
 button.btn{
   font-size:3em;
 }
-button.btn:active{
-  background-color: green;
-}
-#beef{
-  float:right;
-}
-#chicken{
-  float:left;
-  margin:0em;
-}
-#fish{
-  float:left;
-  margin:0em;
-}
-#veg{
-  float:right;
-  margin:0em;
+.btn-block+.btn-block {
+    margin-top: 0px;
 }
 button.start{
   font-size:5em;
 }
 button.meatMenu{
+  float:left;
   width:25%;
+}
+button.standard{
+  float:left;
+  width:50%;
 }
 button.width{
   width:100%;
