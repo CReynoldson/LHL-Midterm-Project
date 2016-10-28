@@ -1,3 +1,17 @@
 #cart{
   border-bottom:1px solid black;
 }
+aside{
+    list-style-type: none;
+    margin: 66%;
+    padding: 0;
+    width: 33%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+
+}
+.float{
+  float:right;
+}
