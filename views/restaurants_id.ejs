@@ -48,10 +48,12 @@
       <section class = "chickenTypes">
         <div class = "row">
           <div class = "col-md-12">
-            <button type="button" class="btn standard btn-primary second btn-block">
+
+            <button id = "crispy" type="button" class="btn standard btn-primary second btn-block">
             Crispy
             </button>
-            <button type="button" class="btn standard btn-primary second btn-block">
+
+            <button id = "grilled" type="button" class="btn standard btn-primary second btn-block">
             Grilled
             </button>
           </div>
@@ -60,10 +62,11 @@
       <section class = "beefTypes">
         <div class = "row">
           <div class = "col-md-12">
-            <button type="button" class="btn standard btn-primary second btn-block">
+            <button id = "ground" type="button" class="btn standard btn-primary second btn-block">
             Ground Beef
             </button>
-            <button type="button" class="btn standard btn-primary second btn-block">
+
+            <button id = "steak" type="button" class="btn standard btn-primary second btn-block">
             Steak
             </button>
           </div>
@@ -72,10 +75,11 @@
       <section class = "fishTypes">
         <div class = "row">
           <div class = "col-md-12">
-            <button type="button" class="btn standard btn-primary second btn-block">
-            Hailbit
+            <button id = "halibut" type="button" class="btn standard btn-primary second btn-block">
+            Halibut
             </button>
-            <button type="button" class="btn standard btn-primary second btn-block">
+
+            <button id = "cod" type="button" class="btn standard btn-primary second btn-block">
             Cod
             </button>
           </div>
@@ -84,10 +88,12 @@
       <section class = "vegTypes">
         <div class = "row">
           <div class = "col-md-12">
-            <button type="button" class="btn standard btn-primary second btn-block">
+            <button id = "tofu" type="button" class="btn standard btn-primary second btn-block">
             Tofu
             </button>
-            <button type="button" class="btn standard btn-primary second btn-block">
+
+            <button id = "rice" type="button" class="btn standard btn-primary second btn-block">
+
             Rice
             </button>
           </div>
@@ -124,38 +130,11 @@
           </section>
       </section>
       <section class ="pictures">
-        <div class = "row">
-          <div class = "col-md-1">
-            <img class = "picture hide beefP" src = ../pictures/cow.png>
-            <img class = "picture hide fishP" src = ../pictures/fish.png>
-            <img class = "picture hide vegP" src = ../pictures/veg.png>
-            <img class = "picture hide chickenP" src = ../pictures/chicken.png>
-          </div>
-        </div>
-        <div class = "row">
-          <div class = "col-md-1">
-            <img class = "picture hide grilled" src = ../pictures/grilled.jpg>
-            <img class = "picture hide crispy" src = ../pictures/crispy.jpg>
-            <img class = "picture hide steak" src = ../pictures/steak.png>
-            <img class = "picture hide ground" src = ../pictures/ground.jpg>
-            <img class = "picture hide tofu" src = ../pictures/tofu.jpg>
-            <img class = "picture hide rice" src = ../pictures/rice.png>
-            <img class = "picture hide cod" src = ../pictures/cod.png>
-            <img class = "picture hide halibit" src = ../pictures/halibut.jpg>
-          </div>
-        </div>
-        <div class = "row">
-          <div class = "col-md-1">
-          </div>
-        </div>
-        <div class = "row">
-          <div class = "col-md-1">
-          </div>
-        </div>
+        <% include ./partials/pictures %>
       </section>
         </div>
-        <div id = "cart" class = "col-md-4">
-           <aside>
+        <div class = "col-md-4">
+           <aside class = "cart">
             <span class = "title">Your Order</span>
               <ul>
                 <li class = "order-items">There isn't anything here yet</li>
@@ -169,12 +148,15 @@
               </ul>
             <p class = "subtotal"> Your subtotal</p>
             <button type="button" class="col-md-offset-3 col-md-6 checkout btn btn-primary btn-md">Done</button>
-          </aside>        </div>
+          </aside>
+          </div>
       </div>
       </div>
       </div>
     </main>
     <script type="text/javascript" src="/scripts/app.js">
+    </script>
+    <script type="text/javascript" src="/scripts/pictures.js">
     </script>
   </body>
 </html>
