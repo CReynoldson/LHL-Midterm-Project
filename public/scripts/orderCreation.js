@@ -1,6 +1,6 @@
 //select active buttons and make them into an object
 
-module.exports var totalOrder = [];
+var totalOrder = [];
 
 $("#addToOrder").on("click", function(){
 
