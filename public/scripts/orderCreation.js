@@ -90,7 +90,7 @@ var addOns = ["#sourCream", "#guac", "#salsa"];
   orderItem.sauce = $("#sauce").val();
 
   addOns.forEach(function (elm){
-    if ($(elm).hasClass("active") && ($(elm).text().trim() == "Sour Cream")){
+    if ($(elm).hasClass("active") && ($(elm).text().trim() === "Sour Cream")){
       orderItem.extras.push("Sour Cream");
     } else if ($(elm).hasClass("active")){
       orderItem.extras.push(elm.substring(1));
@@ -98,11 +98,12 @@ var addOns = ["#sourCream", "#guac", "#salsa"];
   });
 
 
-
+  // Add order to list of orders
   totalOrder.push(orderItem);
-  console.log("THE ONE UNDERNEATH ME IS WHAT YOU'RE LOOKING FOR");
-  console.log(orderItem.stringify());
 
+  //Add order to cart list
+  var cartOrderItem = $("<li>").addClass("order-item").text(orderItem.stringify());
+  $("#order").append(cartOrderItem);
 
   //hide everything so the customer can start a new order
   $(".fillings").slideToggle("fast","linear");
@@ -131,6 +132,7 @@ var addOns = ["#sourCream", "#guac", "#salsa"];
   $(".halibutP").addClass("hide");
   $(".codP").addClass("hide");
   $(".heat").addClass("hide");
+  $(".top").addClass("hide");
 
   console.log("HI!");
 totalOrder.forEach(function (elm){
