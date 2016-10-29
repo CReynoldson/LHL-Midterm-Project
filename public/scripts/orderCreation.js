@@ -1,3 +1,4 @@
+$(document).ready(function(){
 
 //hold multiple items in a given order
 var totalOrder = [];
@@ -142,7 +143,7 @@ console.log("Bye!");
 
 });
 
-
+});
 
 
 
