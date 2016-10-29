@@ -123,7 +123,7 @@ var addOns = ["#sourCream", "#guac", "#salsa"];
   $(".beefP").addClass("hide");
   $(".vegP").addClass("hide");
   $(".fishP").addClass("hide");
-  $(".girlledP").addClass("hide");
+  $(".grilledP").addClass("hide");
   $(".crispyP").addClass("hide");
   $(".steakP").addClass("hide");
   $(".groundP").addClass("hide");
@@ -139,9 +139,6 @@ totalOrder.forEach(function (elm){
   console.log(elm.filling);
 });
 console.log("Bye!");
-
-
-
 
 });
 
