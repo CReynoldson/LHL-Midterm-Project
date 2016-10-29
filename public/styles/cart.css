@@ -9,6 +9,7 @@
   text-align: left;
   font-size: 1em;
   padding: 5px;
+  word-wrap: break-word;
 }
 
 .title {
