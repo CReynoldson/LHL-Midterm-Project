@@ -17,7 +17,7 @@ $(document).ready(function(){
   $('.vegTypes').hide();
   $('.beefTypes').hide();
   $('.extras').hide();
-});
+// });
 
 $(".start").click(function(){
   $(".fillings").slideToggle("fast","linear");
@@ -79,7 +79,7 @@ $(".second").click(function(){
   document.getElementById("sauce").value = "4";
   document.getElementById("heatLevel").innerHTML = "4" + " HEATS";
 });
-$(".third").click(function(){ //sour cream guac salsa
+$(".third").click(function(){
   $(this).toggleClass("active");
   $(this).blur();
 });
@@ -90,7 +90,7 @@ $("#sauce").change(function() {
 });
 
 
-
+});
 
 
 
