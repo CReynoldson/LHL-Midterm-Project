@@ -54,6 +54,9 @@ app.get("/restaurants/id", (req, res) => {
 app.get("/confirm-order", (req, res) => {
   res.render("order_confirmation");
 });
+app.post("/confirm", (req, res) => {
+  res.redirect("/confirm-order")
+})
 
 app.get("/current-orders", (req, res) => {
   res.render("current_orders");
