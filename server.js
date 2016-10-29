@@ -40,11 +40,7 @@ app.use(express.static("public"));
 
 // Home page
 app.get("/", (req, res) => {
-  res.render("index");
-});
-
-app.get("/restaurants", (req, res) => {
-  res.render("restaurants");
+  res.redirect("/restaurants/id");
 });
 
 app.get("/restaurants/id", (req, res) => {
@@ -52,10 +48,13 @@ app.get("/restaurants/id", (req, res) => {
 });
 
 app.get("/confirm-order", (req, res) => {
+  // let templateVars = {order: req.body};
   res.render("order_confirmation");
 });
-app.post("/confirm", (req, res) => {
-  res.redirect("/confirm-order")
+
+app.post("/confirm-order", (req, res) => {
+  console.log(req.body);
+  res.redirect("/confirm-order");
 })
 
 app.get("/current-orders", (req, res) => {
