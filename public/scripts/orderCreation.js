@@ -145,39 +145,37 @@ $("#addToOrder").on("click", function(){
   $(".codP").addClass("hide");
   $(".heat").addClass("hide");
   $(".top").addClass("hide");
-
-
-});
+  });
 
 
   var allOrderItems = []; // this is what we submit in ajax
 
-$("#submitOrder").click(function(){
-    totalOrder.forEach(function(orderItem){
-      allOrderItems.push(orderItem.data());
-      console.log(orderItem.data());
+  $("#submitOrder").click(function(){
+      totalOrder.forEach(function(orderItem){
+        allOrderItems.push(orderItem.data());
+        console.log(orderItem.data());
+      });
+    submitOrder (event, allOrderItems);
+  });
+
+  function submitOrder (event, allOrderItems){
+    // if(event){event.preventDefault()};
+    console.log("clicked Confirm");
+    console.log("InsideFunction", allOrderItems);
+    $.ajax({
+      method: "POST",
+      url: "/confirm-order",
+      type: 'POST',
+      // contentType: 'application/json',
+      // dataType: 'json',
+      data: {
+        myArray: allOrderItems
+      },
+      success: function(response){
+        window.location.href = "/confirm-order";
+      }
     });
-  submitOrder (event, allOrderItems);
-});
-
-function submitOrder (event, allOrderItems){
-  // if(event){event.preventDefault()};
-  console.log("clicked Confirm");
-  console.log("InsideFunction", allOrderItems);
-  $.ajax({
-    method: "POST",
-    url: "/confirm-order",
-    type: 'POST',
-    // contentType: 'application/json',
-    // dataType: 'json',
-    data: {
-      myArray: allOrderItems
-    },
-    success: function(response){
-      window.location.href = "/confirm-order";
-    }
-  });
-}
+  }
 
 
 
@@ -195,14 +193,6 @@ function submitOrder (event, allOrderItems){
 
 
 
-
-
-
-
-
-
-
-// });
 
 
 
