@@ -17,7 +17,7 @@ $(document).ready(function(){
   $('.vegTypes').hide();
   $('.beefTypes').hide();
   $('.extras').hide();
-});
+// });
 
 $(".start").click(function(){
   $(".fillings").slideToggle("fast","linear");
@@ -90,7 +90,7 @@ $("#sauce").change(function() {
 });
 
 
-
+});
 
 
 

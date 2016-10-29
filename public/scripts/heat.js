@@ -1,4 +1,4 @@
-
+$(document).ready(function(){
 $("#sauce").change(function() {
   var heat = Number(document.getElementById("sauce").value);
   switch(heat){
@@ -35,4 +35,5 @@ $("#sauce").change(function() {
       $(".8").siblings().addClass("hide");
   }
 
+});
 });

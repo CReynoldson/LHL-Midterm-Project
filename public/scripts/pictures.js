@@ -1,3 +1,6 @@
+$(document).ready(function(){
+
+
 $(".start").click(function(){
   $(".chickenP").addClass("hide");
   $(".beefP").addClass("hide");
@@ -166,3 +169,7 @@ $("#guac").click(function(){
 $("#salsa").click(function(){
   $(".salsa").toggleClass("hide")
 });
+
+
+});
+
