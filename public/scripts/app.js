@@ -33,6 +33,7 @@ $(".start").click(function(){
   $(".meatMenu").removeClass("hide");
   $(".meatMenu").removeClass("active");
   $(".third").removeClass("active");
+  $(this).blur();
 });
 
 $("#chicken").click(function(){
@@ -64,11 +65,13 @@ $(".meatMenu").click(function(){
   $(".third").removeClass("active");
   $(this).siblings().toggleClass("hide");
   $(this).toggleClass( "width" );
+  $(this).blur();
   $(".heat").addClass("hide");
 });
 
 $(".second").click(function(){
   $(this).toggleClass("active");
+  $(this).blur();
   $(this).toggleClass("width");
   $(".third").removeClass("active");
   $(this).siblings().toggleClass("hide");
