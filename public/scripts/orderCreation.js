@@ -2,9 +2,9 @@ $(document).ready(function(){
 
 //hold multiple items in a given order
 var totalOrder = [];
-
+console.log(totalOrder)
 //take active choices and turn them into an orderItem object
-$("#addToOrder").on("click", function(){
+$("#addToOrder").click(function(){
 var typesOfProtein = ["#chicken","#beef","#veg","#fish"];
 var possibleOrderFillings = ["#crispy", "#grilled", "#ground", "#steak", "#halibut", "#cod", "#tofu", "#rice"]
 var addOns = ["#sourCream", "#guac", "#salsa"];
@@ -76,7 +76,6 @@ var addOns = ["#sourCream", "#guac", "#salsa"];
       orderItem.type = elm.substring(1);
     }
   });
-  console.log(orderItem.type);
 
   possibleOrderFillings.forEach(function (elm){
 
@@ -101,7 +100,6 @@ var addOns = ["#sourCream", "#guac", "#salsa"];
 
   // Add order to list of orders
   totalOrder.push(orderItem);
-
   //Add order to cart list
   var cartOrderItem = $("<li>").addClass("order-item").text(orderItem.stringify());
   $("#order").append(cartOrderItem);
@@ -135,40 +133,21 @@ var addOns = ["#sourCream", "#guac", "#salsa"];
   $(".heat").addClass("hide");
   $(".top").addClass("hide");
 
-  console.log("HI!");
-totalOrder.forEach(function (elm){
-  console.log(elm.filling);
-});
-console.log("Bye!");
 
 });
 
+  $(function(){
+    $('#confirm').on('submit', function(event){
+      event.preventDefault();
+      const thisFrom = $(this);
+      var newOrder = $.ajax({
+        url: thisFrom.attr('action'),
+        method: thisFrom.attr('method'),
+        data: thisFrom.serialize()
+      });
+      newOrder.done(function(data){
+        console.log(data);
+      })
+    });
+  });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
