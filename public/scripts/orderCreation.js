@@ -5,15 +5,26 @@ var totalOrder = [];
 
 //take active choices and turn them into an orderItem object
 $("#addToOrder").on("click", function(){
-var typesOfProtein = ["#chicken","#beef","#veg","#fish"];
-var possibleOrderFillings = ["#crispy", "#grilled", "#ground", "#steak", "#halibut", "#cod", "#tofu", "#rice"]
-var addOns = ["#sourCream", "#guac", "#salsa"];
+  var typesOfProtein = ["#chicken","#beef","#veg","#fish"];
+  var possibleOrderFillings = ["#crispy", "#grilled", "#ground", "#steak", "#halibut", "#cod", "#tofu", "#rice"]
+  var addOns = ["#sourCream", "#guac", "#salsa"];
 
   var orderItem = {
     type: "",
     filling: "",
     sauce: "",
     extras: [],
+
+    // this method should return an object with just the data
+    data: function() {
+      return {
+        type: this.type,
+        filling: this.filling,
+        sauce: this.sauce,
+        extras: this.extras,
+      }
+    },
+
     spiciness: function (num){
       var text = ""
       switch(num){
@@ -135,15 +146,75 @@ var addOns = ["#sourCream", "#guac", "#salsa"];
   $(".heat").addClass("hide");
   $(".top").addClass("hide");
 
-  console.log("HI!");
-totalOrder.forEach(function (elm){
-  console.log(elm.filling);
-});
-console.log("Bye!");
+  // totalOrder.forEach(function(elm){
+  //   console.log(elm.this.stringify());
+  // });
 
+
+  console.log('total order', totalOrder);
+
+
+  // This is another option to convert the object above and just return it's properties
+  // allOrderItems should be clean for passing via ajax below
+
+
+  // console.log("Before Submit", totalOrder);
+    //submit order to Confirm Order Page
 });
 
+  var allOrderItems = []; // this is what we submit in ajax
+
+$("#submitOrder").click(function(){
+    totalOrder.forEach(function(orderItem){
+      allOrderItems.push(orderItem.data());
+      console.log(orderItem.data());
+    });
+  submitOrder (event, allOrderItems);
 });
+
+function submitOrder (event, allOrderItems){
+  // if(event){event.preventDefault()};
+  console.log("clicked Confirm");
+  console.log("InsideFunction", allOrderItems);
+  $.ajax({
+    method: "POST",
+    url: "/confirm-order",
+    type: 'POST',
+    // contentType: 'application/json',
+    // dataType: 'json',
+    data: {
+      myArray: allOrderItems
+    },
+    success: function(response){
+      window.location.href = "/confirm-order";
+    }
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  });
+
+
+
+
+
+
+
+
+
+
+// });
 
 
 
