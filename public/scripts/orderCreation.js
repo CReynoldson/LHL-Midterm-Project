@@ -2,12 +2,14 @@ $(document).ready(function(){
 
 //hold multiple items in a given order
 var totalOrder = [];
-
+console.log(totalOrder)
 //take active choices and turn them into an orderItem object
+
 $("#addToOrder").on("click", function(){
   var typesOfProtein = ["#chicken","#beef","#veg","#fish"];
   var possibleOrderFillings = ["#crispy", "#grilled", "#ground", "#steak", "#halibut", "#cod", "#tofu", "#rice"]
   var addOns = ["#sourCream", "#guac", "#salsa"];
+
 
   var orderItem = {
     type: "",
@@ -87,7 +89,6 @@ $("#addToOrder").on("click", function(){
       orderItem.type = elm.substring(1);
     }
   });
-  console.log(orderItem.type);
 
   possibleOrderFillings.forEach(function (elm){
 
@@ -112,7 +113,6 @@ $("#addToOrder").on("click", function(){
 
   // Add order to list of orders
   totalOrder.push(orderItem);
-
   //Add order to cart list
   var cartOrderItem = $("<li>").addClass("order-item").text(orderItem.stringify());
   $("#order").append(cartOrderItem);
@@ -146,21 +146,9 @@ $("#addToOrder").on("click", function(){
   $(".heat").addClass("hide");
   $(".top").addClass("hide");
 
-  // totalOrder.forEach(function(elm){
-  //   console.log(elm.this.stringify());
-  // });
 
-
-  console.log('total order', totalOrder);
-
-
-  // This is another option to convert the object above and just return it's properties
-  // allOrderItems should be clean for passing via ajax below
-
-
-  // console.log("Before Submit", totalOrder);
-    //submit order to Confirm Order Page
 });
+
 
   var allOrderItems = []; // this is what we submit in ajax
 
@@ -215,6 +203,7 @@ function submitOrder (event, allOrderItems){
 
 
 // });
+
 
 
 
