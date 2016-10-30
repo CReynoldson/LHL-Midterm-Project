@@ -6,8 +6,7 @@ exports.up = function(knex, Promise) {
    table.string("extra1");
    table.string("extra2");
    table.string("extra3");
-   table.integer("sauce");
-
+   table.integer("sauce").notNullable();
   });
 };
 
