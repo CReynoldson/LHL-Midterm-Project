@@ -63,36 +63,22 @@ app.get("/confirm-order", (req, res) => {
   console.log("Got to app.get confirmorder!");
   renderOrder.lookup(knex, (orderInfo) => {
     renderOrder.render(orderInfo, (renderedInfo) => {
-      let templateVars = {order: renderedInfo};
-      res.render("order_confirmation.ejs", templateVars);
-    })
+      renderOrder.refresh(knex, (status) => {
+        console.log(status);
+        let templateVars = {order: renderedInfo};
+        res.render("order_confirmation.ejs", templateVars);
+      })
+    });
   });
 });
 
-// router.get("/", (req, res) => {
-//   db.getMenu(1).then((data) => {
-//     res.render("../views/customers/index", {data});
-//   });
-// });
-
-
-
-
-
-
-
-
-
 app.post("/confirm-order", (req, res) => {
-  console.log("got to the parsing section!");
-
   res.redirect("/confirm-order");
-})
-
+});
 
 app.get("/current-orders", (req, res) => {
   res.render("current_orders");
-})
+});
 
 app.get("/orders-in-progress", (req, res) => {
   res.render("restaurant_orders");

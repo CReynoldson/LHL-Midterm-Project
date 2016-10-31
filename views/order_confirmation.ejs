@@ -23,19 +23,19 @@
     <div class = "container box">
       <h1>Your order details:</h1>
       <div id = "confirm-order-items" class = "row">
-        <div class = "list-of-order-items col-md-10">
+        <div class = "list-of-order-items col-md-7">
           <p> Please take a moment to make sure your burrito order is as awesome as possible: </p>
-          <ul>
+          <ol>
             <% order.forEach(function(elm) { %>
-            <li><%= elm %> </li>
+            <li class="order-item"><%= elm %> </li>
             <% }); %>
-          </ul>
+          </ol>
           <!-- list of order items col-md-10 end -->
           <form action = "sendOrder" method="POST">
           <button id = "confirmOrder" class = "btn-primary">Confirm</button>
           </form>
         </div>
-        <div class = "col-md-2">
+        <div class = "col-md-5">
           <aside class = "thanks">
             <p>Thanks for buying our fab burritos!</p>
 
