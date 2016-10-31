@@ -20,8 +20,12 @@ const twilio        = require('twilio');
 
 // Seperated Routes for each Resource
 const usersRoutes = require("./routes/users");
-var accountSid = 'ACc3d9540af089cd45dc236d18dc178043';
-var authToken = 'b0f6a5c2594c547905fe08ad215b0967';
+
+const twiliosettings = require("./twiliosettings")
+var accountSid = twiliosettings.accountSid;
+var authToken = twiliosettings.authToken;
+var twilio = require('twilio');
+
 var client = new twilio.RestClient(accountSid, authToken);
 
 // Load the logger first so all (static) HTTP requests are logged to STDOUT
@@ -92,11 +96,11 @@ app.get("/orders-in-progress", (req, res) => {
 });
 app.post("/sendOrder", (req, res) => {
     client.messages.create({
-        to: "+12505889033",
-        from: "+17784001527",
+        to: twiliosettings.phone,
+        from: twiliosettings.twiliophone,
         body: "Your order will be ready in 5 minutes!"
     }, function(err, message) {
-        console.log(message.sid);
+        console.log(message);
     });
   res.redirect("/restaurants/id")
 })
