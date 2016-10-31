@@ -15,7 +15,7 @@ const morgan        = require('morgan');
 const knexLogger    = require('knex-logger');
 const confirmOrders = require("./routes/confirm-orders");
 const renderOrder   = require("./routes/render-orders");
-//const twilio        = require('twilio');
+const twilio        = require('twilio');
 
 
 // Seperated Routes for each Resource
@@ -83,6 +83,7 @@ app.get("/current-orders", (req, res) => {
 app.get("/orders-in-progress", (req, res) => {
   res.render("restaurant_orders");
 });
+
 app.post("/sendOrder", (req, res) => {
     client.messages.create({
         to: twiliosettings.phone,
