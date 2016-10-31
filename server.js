@@ -15,18 +15,18 @@ const morgan        = require('morgan');
 const knexLogger    = require('knex-logger');
 const confirmOrders = require("./routes/confirm-orders");
 const renderOrder   = require("./routes/render-orders");
-const twilio        = require('twilio');
+// const twilio        = require('twilio');
 
 
 // Seperated Routes for each Resource
 const usersRoutes = require("./routes/users");
 
-const twiliosettings = require("./twiliosettings")
-var accountSid = twiliosettings.accountSid;
-var authToken = twiliosettings.authToken;
-var twilio = require('twilio');
+// const twiliosettings = require("./twiliosettings")
+// var accountSid = twiliosettings.accountSid;
+// var authToken = twiliosettings.authToken;
 
-var client = new twilio.RestClient(accountSid, authToken);
+
+// var client = new twilio.RestClient(accountSid, authToken);
 
 // Load the logger first so all (static) HTTP requests are logged to STDOUT
 // 'dev' = Concise output colored by response status for development use.
@@ -61,8 +61,11 @@ app.get("/restaurants/id", (req, res) => {
 
 app.get("/confirm-order", (req, res) => {
   console.log("Got to app.get confirmorder!");
-  renderOrder.lookup(knex).then((customerOrder) => {
-    console.log(customerOrder);
+  renderOrder.lookup(knex, (orderInfo) => {
+    renderOrder.render(orderInfo, (renderedInfo) => {
+      let templateVars = {order: renderedInfo};
+      res.render("order_confirmation.ejs", templateVars);
+    })
   });
 });
 

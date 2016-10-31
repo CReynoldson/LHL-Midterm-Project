@@ -25,7 +25,11 @@
       <div id = "confirm-order-items" class = "row">
         <div class = "list-of-order-items col-md-10">
           <p> Please take a moment to make sure your burrito order is as awesome as possible: </p>
-          <!-- <%%> This is where you'lll have to get the template vars of the order-->
+          <ul>
+            <% order.forEach(function(elm) { %>
+            <li><%= elm %> </li>
+            <% }); %>
+          </ul>
           <!-- list of order items col-md-10 end -->
           <form action = "sendOrder" method="POST">
           <button id = "confirmOrder" class = "btn-primary">Confirm</button>
