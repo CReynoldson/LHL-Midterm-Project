@@ -2,27 +2,30 @@
 
 require('dotenv').config();
 
-const PORT        = process.env.PORT || 8080;
-const ENV         = process.env.ENV || "development";
-const express     = require("express");
-const bodyParser  = require("body-parser");
-const sass        = require("node-sass-middleware");
-const app         = express();
+const PORT          = process.env.PORT || 8080;
+const ENV           = process.env.ENV || "development";
+const express       = require("express");
+const bodyParser    = require("body-parser");
+const sass          = require("node-sass-middleware");
+const app           = express();
 
-const knexConfig  = require("./knexfile");
-const knex        = require("knex")(knexConfig[ENV]);
-const morgan      = require('morgan');
-const knexLogger  = require('knex-logger');
+const knexConfig    = require("./knexfile");
+const knex          = require("knex")(knexConfig[ENV]);
+const morgan        = require('morgan');
+const knexLogger    = require('knex-logger');
 const confirmOrders = require("./routes/confirm-orders");
-// const submitOrders = require("./routes/submit-orders");
+const renderOrder   = require("./routes/render-orders");
+const twilio        = require('twilio');
 
 
 // Seperated Routes for each Resource
 const usersRoutes = require("./routes/users");
+
 const twiliosettings = require("./twiliosettings")
 var accountSid = twiliosettings.accountSid;
 var authToken = twiliosettings.authToken;
 var twilio = require('twilio');
+
 var client = new twilio.RestClient(accountSid, authToken);
 
 // Load the logger first so all (static) HTTP requests are logged to STDOUT
@@ -45,7 +48,6 @@ app.use(express.static("public"));
 
 // Mount all resource routes
 //app.use("/api/users", usersRoutes(knex));
-// app.use("/api/customer-order", retrieveOrders(knex));
 app.use("/confirm-order", confirmOrders(knex));
 
 // Home page
@@ -58,9 +60,24 @@ app.get("/restaurants/id", (req, res) => {
 });
 
 app.get("/confirm-order", (req, res) => {
-  // let templateVars = {order: req.body};
-  res.render("order_confirmation");
+  console.log("Got to app.get confirmorder!");
+  renderOrder.lookup(knex).then((customerOrder) => {
+    console.log(customerOrder);
+  });
 });
+
+// router.get("/", (req, res) => {
+//   db.getMenu(1).then((data) => {
+//     res.render("../views/customers/index", {data});
+//   });
+// });
+
+
+
+
+
+
+
 
 
 app.post("/confirm-order", (req, res) => {

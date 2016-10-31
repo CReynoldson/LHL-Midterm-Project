@@ -177,19 +177,7 @@ $("#addToOrder").on("click", function(){
     });
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-  });
+});
 
 
 
