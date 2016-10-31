@@ -13,10 +13,14 @@ module.exports = {
   render: (data, cb) => {
     let rendered = data.map(function (obj){
       let type = capitalize(obj.type);
+      console.log(type);
       let filling = capitalize(obj.filling);
+      console.log(filling);
       let sauce = obj.sauce;
+      console.log(sauce);
       if (extra1 !== null){
       var extra1 = capitalize(obj.extra1);
+      console.log(extra1);
       }
       if (extra2 !== null){
       var extra2 = capitalize(obj.extra2);
@@ -37,5 +41,5 @@ module.exports = {
 //end of .exports
 };
   function capitalize (string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
+    return string.charAt(0).toUpperCase() + string.slice(1);
 };
