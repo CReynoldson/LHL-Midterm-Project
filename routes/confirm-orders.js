@@ -6,7 +6,6 @@ const router  = express.Router();
 module.exports = (knex) => {
 
   router.post("/", (req, res) => {
-    console.log("In router post with ", req.body);
     let input = req.body;
 
     input.myArray.forEach(function (elm){
@@ -14,16 +13,18 @@ module.exports = (knex) => {
       let filling = elm.filling;
       if(!elm.extras){
         let sauce = elm.sauce;
-        knex("customer-orders")
-          .returning('type')
+        knex
+          .returning(['id', 'type', 'sauce'])
           .insert({type: type, filling: filling, sauce: sauce})
+          .into('customerOrders')
           .then ((resourceID) => {
             console.log(resourceID);
-            knex.select("*").from("customer-orders").then((result) => {
+            knex.select('*').from('customerOrders')
+            .then((result) => {
               console.log(result);
               res.redirect("/confirm-order");
-            })
-          })
+            });
+          });
       } else {
         let extra1 = "";
         let extra2 = "";
@@ -41,21 +42,24 @@ module.exports = (knex) => {
             extra2 = elm.extras[1];
             extra3 = elm.extras[2];
             break;
-        }
+          }
         let sauce = elm.sauce;
-        console.log("About to run Knex stuff");
-        knex("customer-orders")
-          .insert({type: type, filling: filling, extra1: extra1, extra2: extra2, extra3: extra3, sauce: sauce});
-      }
+        knex
+          .returning(['id', 'type', 'sauce'])
+          .insert({type: type, filling: filling, sauce: sauce})
+          .into('customerOrders')
+          .then ((resourceID) => {
+            knex.select('*').from('customerOrders')
+            .then((result) => {
+              res.json(result);
+            });
+          });
+        }
     });
-    // console.log(input);
-    // knex
-    //   .insert("*")
-    //   .to("TABLENAME???")
-    //   .then((results) => {
-    //     res.json(results);
-    // });
   });
+
+
+  console.log("returning router");
 
   return router;
 }

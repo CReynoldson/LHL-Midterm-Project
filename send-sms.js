@@ -4,10 +4,10 @@ $(document).ready(function(){
   var authToken = 'b0f6a5c2594c547905fe08ad215b0967';
   var client = require('twilio')(accountSid, authToken);
 
-  $("#confrimOrder").click(function(){
+  $("#confirmOrder").click(function(){
 
     client.messages.create({
-        to: "+12505889033",
+        to: "+12503758535",
         from: "+17784001527",
         body: "Your order will be ready in 5 minutes!"
     }, function(err, message) {
