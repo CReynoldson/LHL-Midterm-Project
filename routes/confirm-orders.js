@@ -46,7 +46,7 @@ module.exports = (knex) => {
         let sauce = elm.sauce;
         knex
           .returning(['id', 'type', 'sauce'])
-          .insert({type: type, filling: filling, sauce: sauce})
+          .insert({type: type, filling: filling, sauce: sauce, extra1: extra1, extra2: extra2, extra3: extra3})
           .into('customerOrders')
           .then ((resourceID) => {
             knex.select('*').from('customerOrders')
